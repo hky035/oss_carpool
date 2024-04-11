@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+:root {
+    --nav-text-color : gray;
+    --box-shadow : 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 폰트 적용 안된다. */
+* {
+    font-family: 'Ubuntu';
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+    color : black;
+}
+
+nav{
+    padding : 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+nav a.logo{
+    font-size: 33px;
+    font-weight: 600;
+    color: #0f2182;
+}
+
+
+
+nav .menu a{
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+nav .menu a:hover{
+    font-size : 25px;
+    font-weight : 500;
+}
+
+
+nav .menu a:not(:last-child){
+    margin-right: 20px;
+}
+
+nav .link a{
+    padding : 8px 14px;
+    margin-right:  14px;
+    font-size: 20px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+nav .link a:hover {
+    background-color: white;
+}
+
+
+.description {
+    padding : 0 80px;
+    margin-top : 60px;
+}
+
+.description>p{
+    margin-top : 30px;
+}
+
+.description h1 {
+    font-size: 40px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.description>p {
+    font-weight: bold;
+    font-style: italic;
+    width: 500px;
+}
+
+.menu-list {
+    margin : 50px 70px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-list-card{
+    width: calc(100%/4);
+    height: 200px;
+    background-color: rgba(168, 184, 194, 0.5);
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    padding: 30px 30px;
+    font-weight: bold;
+}
+
+.menu-list-card:nth-child(1){
+    background-color: #dde0f28c;
+}
+
+.menu-list-card:nth-child(1) .menu-card-description{
+    color: #8f9ee4;
+}
+
+.menu-list-card:nth-child(2){
+    background-color: #99f58f39;
+}
+
+.menu-list-card:nth-child(2) .menu-card-description{
+    color: #99e392;
+}
+
+.menu-list-card:nth-child(3){
+    background-color: #e7d4d48c;
+}
+
+.menu-list-card:nth-child(3) .menu-card-description{
+    color: #e2a0a0;
+}
+
+.menu-list-card .menu-card-title{
+    text-align: right;
+    font-size: 30px;
+    margin : 10px 0;
+}
+
+.menu-list-card .menu-card-description {
+    text-align: left;
+    margin-top : 30px;
+}
+
+.carpool-list-separator {
+    margin: 0px 75px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.carpool-list {
+    display: flex;
+    margin: 0 75px;
+    margin-bottom: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carpool-list-card {    
+    background-color: rgba(235, 237, 242, 0.761);
+    height: 320px;
+    width: 20%;
+    border-radius: 50px;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s;
+}
+
+.carpool-list-card:hover {
+    /* box-shadow: none; */
+    scale: 1.03 1.03;
+}
+
+
+.carpool-image{
+    background-color: black;
+    height: 55%;
+    width : 100%;
+    border-radius: 50px 50px 0 0;
+}
+
+.carpool-description{
+    margin : 15px 10px;
+}
+
+.carpool-description p{
+    margin : 10px 0 0 10px;
+}
+/* carpool 카드의 출발 도착을 지하철역 노선도 처럼 표시 
+   인원은 별점표처럼 보일 수 있도록(너무 과한가)*/
+
+.go_to_carpool {
+    border-radius: 50%;
+    background-color: gray;
+    padding: 10px;
+}
+
+.go-to-carpool, .go-to-mileage-store {
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    fill : black;
+    transition: all 0.3s;
+    padding: 15px 15px;
+}
+
+.go-to-carpool:hover, .go-to-mileage-store:hover {
+    background-color: white;
+}
+
+
+.post-list-title{
+    margin: 0 75px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.post-list-title .post-list-separator{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.post-list-title .go-to-post{
+    text-align: end;
+    padding: 10px 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: gray;
+    transition: all 0.3s;
+    border-radius: 15px;
+}
+
+.post-list-title .go-to-post:hover{
+    font-weight: 600;
+}
+
+
+
+/* 차라리 div두개로 나눠서 하나는 left, 하나는 right로 하기 */
+
+.post-container {
+    margin : 0 75px;
+    margin-bottom:100px;
+    height: 500px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.post-card {
+    width: 49%;
+    height: 45%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    box-shadow: var(--box-shadow);
+    transition : all 0.3s
+}
+
+.post-content {
+    margin : 40px 40px;
+    display: flex;
+    flex-direction: column;
+    gap : 10px
+}
+
+.post-content .post-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.post-content .post-like {
+    align-self: end;
+}
+
+.post-content .post-description{
+    margin-top : 15px;
+}
+
+
+.mileage-store-separator {
+    margin: 0 75px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.mileage-item-container {
+    margin : 0 75px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mileage-item {
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    width: calc(100%/5);
+    height: 80px;
+    border-radius: 15px;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.mileage-item .mileage-image {
+    background-color: black;
+    width: 70px;
+    height: 70px;
+    /* border-radius: 15px; */
+}
+
+.mileage-item .mileage-description {
+    display: flex;
+    flex-direction: column;
+    gap : 10px;
+}
+
+.mileage-item .mileage-description .mileage-item-title{
+    font-weight: 600;
+}
+
+footer {
+    background-color: black;
+    height: 200px;
+}
+
+footer .content {
+    padding: 50px 75px;
+    color : white;
+}
+
+footer .content .footer-title {
+    font-size: 40px;
+    font-weight: 600;
+    font-style: italic;
+    text-align: right;
+}

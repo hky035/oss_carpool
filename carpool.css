@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+:root {
+    --nav-text-color : gray;
+    --box-shadow : 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body{
+    background-color: #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+    color : black;
+}
+
+nav{
+    padding : 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+nav a.logo{
+    font-size: 33px;
+    font-weight: 600;
+    color: #0f2182;
+}
+
+
+
+nav .menu a{
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+nav .menu a:hover{
+    font-size : 25px;
+    font-weight : 500;
+}
+
+
+nav .menu a:not(:last-child){
+    margin-right: 20px;
+}
+
+nav .link a{
+    padding : 8px 14px;
+    margin-right:  14px;
+    font-size: 20px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+nav .link a:hover {
+    background-color: white;
+}
+
+.separator{
+    margin : 0 75px;
+    margin-top : 50px;
+    margin-bottom : 30px;
+    font-weight: 800;   
+    font-size: 50px;
+    font-style: italic;
+}
+
+.description {
+    margin : 0 75px;
+    width: 1000px;
+    font-size: 25px;
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-area{
+    margin : 50px 75px;
+    padding: 10px;
+    width: 60%;
+    border : none;
+    border-radius: 15px;
+    height: 80px;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-area .input-box {
+    width: 40%;
+    border : 1px solid rgb(217, 217, 220);
+    border-radius: 15px;
+    height: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.search-area .input-box svg {
+    margin : 0 15px;
+    cursor : pointer;
+}
+
+.search-area .input-box input{
+    outline: none;
+    width: 70%;
+    border: none;
+    font-size: 20px;
+}
+
+.search-area .change {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.search-area .change svg {
+    padding: 20px;
+    border-radius: 50%;
+    transition : all 0.3s;
+}
+
+.search-area .change svg:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+
+.search-section .right {
+    width: 20%;
+}
+
+.carpool-list {
+    display: flex;
+    margin: 0 75px;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: wrap;
+    gap : 30px;
+}
+
+.carpool-list-card {    
+    background-color: rgba(235, 237, 242, 0.761);
+    height: 320px;
+    width: 300px;
+    border-radius: 50px;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s;
+    margin-bottom: 30px;
+}
+
+.carpool-list-card:hover {
+    /* box-shadow: none; */
+    scale: 1.03 1.03;
+}
+
+
+.carpool-image{
+    background-color: black;
+    height: 55%;
+    width : 100%;
+    border-radius: 50px 50px 0 0;
+}
+
+.carpool-description{
+    margin : 15px 10px;
+}
+
+.carpool-description p{
+    margin : 10px 0 0 10px;
+}
+/* carpool 카드의 출발 도착을 지하철역 노선도 처럼 표시 
+   인원은 별점표처럼 보일 수 있도록(너무 과한가)*/
+
+.go_to_carpool {
+    border-radius: 50%;
+    background-color: gray;
+    padding: 10px;
+}
+
+.go-to-carpool, .go-to-mileage-store {
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    fill : black;
+    transition: all 0.3s;
+    padding: 15px 15px;
+}
+
+.go-to-carpool:hover, .go-to-mileage-store:hover {
+    background-color: white;
+}
+
+.page-handler {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    width: 200px;
+    position: relative;
+    left: calc(50% - 50px);
+
+}
+
+.page-handler a {
+    padding : 14px 20px;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: all 0.3s;
+
+}
+
+.page-handler a:hover{
+    background-color: #fff;
+}
