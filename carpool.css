@@ -198,6 +198,7 @@ nav .link a:hover {
 }
 
 .page-handler {
+    margin-bottom: 30px;
     display: flex;
     align-self: center;
     align-items: center;
@@ -218,3 +219,134 @@ nav .link a:hover {
 .page-handler a:hover{
     background-color: #fff;
 }
+
+
+/* modal */
+.modal-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.modal-content {
+    position: absolute;
+    background-color: #fff;
+    width: 80%;
+    height: 80%;
+
+    border-radius: 50px;
+    animation: slidefade 0.2s ease-in;
+    display: flex;
+
+}
+
+.modal-close {
+    padding: 30px;
+    position: absolute;
+    top : 15px;
+    right: 15px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-container.hidden{
+    display: none;
+}
+
+.modal-content .left {
+    width: 35%;
+    height: 100%;
+    background-color: #f1f1f1;
+    border-radius: 50px 0 0 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content .left .map{
+    height: 60%;
+    width: 100%;
+}
+
+.modal-content .left .specification{
+    height: 40%;
+    width: 100%;
+    background-color: #aaaaff;
+    border-radius: 0 0 0 50px;
+}
+
+.modal-content .right {
+    width: 65%;
+}
+
+.modal-content .right h2{
+    margin : 50px 50px 30px 50px;
+    font-size: 40px;
+}
+
+.modal-content .right .distributor{
+    margin : 0 50px 30px 50px;
+}
+
+.modal-content .right .drvier-description{
+    margin : 0 50px;
+    margin-bottom : 30px;
+    height: 100px;
+}
+
+.modal-content .right .form-container{
+    margin : 0 50px;
+    background-color: #f1f1f1;
+    height: 300px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.modal-content .right .form-container h3{
+    margin : 30px 30px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.modal-content .right .form-container .notice{
+    margin : 0 30px;
+}
+
+.modal-content .right .register-button{
+    height: 50px;
+    margin : 30px 50px;
+    background-color: rgb(96, 165, 96);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.modal-content .right .register-button:hover{
+    scale: 1.03 1.05;
+}
+
+@keyframes slidefade {
+    0% {
+        opacity: 0;
+    }
+}
+
